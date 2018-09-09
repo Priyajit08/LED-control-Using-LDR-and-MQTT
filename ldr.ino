@@ -1,12 +1,4 @@
-
-/************************** Configuration ***********************************/
-
-// edit the config.h tab and enter your Adafruit IO credentials
-// and any additional configuration needed for WiFi, cellular,
-// or ethernet clients.
 #include "config.h"
-
-/************************ Example Starts Here *******************************/
 
 // analog pin 0
 #define LDR A0
@@ -79,7 +71,5 @@ void handleMessage(AdafruitIO_Data *data) {
     Serial.println("HIGH");
   else
     Serial.println("LOW");
-
-  // write the current state to the led
   digitalWrite(LED_PIN, data->toPinLevel());
   }
